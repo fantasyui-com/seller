@@ -8,7 +8,7 @@ Shocking support for multiple domains, as they become the prime mover.
 
 Simply point a domain at the IP, and get a store.
 
-## Previous research
+## Previous Research
 
 seller is based on core concepts behind
 https://github.com/fantasyui-com/online-marketplace
