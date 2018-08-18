@@ -2,6 +2,7 @@
   "name": "seller",
   "version": "0.3.0",
   "scripts": {
+    "watch": "nodemon ./bin/www",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/fantasyui-com/seller/issues"
   },
-  "homepage": "https://github.com/fantasyui-com/seller#readme"
+  "homepage": "https://github.com/fantasyui-com/seller#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
 }
