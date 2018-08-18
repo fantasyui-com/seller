@@ -1,9 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+const config = require('../config.js');
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+
+  console.log('[config]', config)
+  res.render('index', Object.assign({
+    // vendorId: kebabCase(req.params.vendorId),
+  }, config));
+
+
 });
 
 module.exports = router;

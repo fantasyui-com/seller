@@ -1,6 +1,8 @@
 # seller
 Multi seller, multi vendor e-commerce marketplace with focus on maximal minimalism.
 
+![logo.png](logo.png)
+
 ## Theory of Operation
 
 - All CC processing via 3rd party, no valuable information on server.
