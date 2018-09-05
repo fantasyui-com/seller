@@ -10,8 +10,5 @@ data.vendorCount = Number.MAX_SAFE_INTEGER.toLocaleString(
   { minimumFractionDigits: 0 }
 );
 
-const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-const d = new Date();
-data.monthName = monthNames[d.getMonth()];
 
 module.exports = data;

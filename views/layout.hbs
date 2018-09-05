@@ -7,6 +7,7 @@
 
   <link rel="icon" href="images/favicon.ico">
 
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
@@ -18,32 +19,48 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+
+  <script src="javascripts/common.js"></script>
+
 </head>
 
-<body>
+<body class="bg-light">
+
+  <template id="my-paragraph">
+    <p>My paragraph</p>
+    <p><slot name="my-text">My default text</slot></p>
+  </template>
+
 
   <div class="container">
 
     <div class="row">
       <div class="col">
+
+        <component-nav items="Get Free Goods, Open a Shop, Become a Partner, Discussions, Blog, Free Bonus Credits" />
+        
+
+
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link small text-muted" href="#">Get Free Goods</a>
+            <a class="nav-link small" href="#">Get Free Goods</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link small text-muted" href="#">Open a Shop</a>
+            <a class="nav-link small" href="#">Open a Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link small text-muted" href="#">Become a Partner</a>
+            <a class="nav-link small" href="#">Become a Partner</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link small text-muted" href="#">Discussions</a>
+            <a class="nav-link small" href="#">Discussions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link small text-muted" href="#">Blog</a>
+            <a class="nav-link small" href="#">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link small text-muted disabled" href="#">Free Bonus Credits</a>
+            <a class="nav-link small disabled" href="#">Free Bonus Credits</a>
           </li>
         </ul>
       </div>
@@ -62,13 +79,13 @@
     <div class="row bg-dark text-white space">
       <div class="col text-center p-3">
 
-        <h1>{{title}} <img rel="icon" src="images/favicon.ico"></h1> {{title}} &mdash; world’s marketplace for design.<br> {{note}}
+        <h1>{{title}}</h1> {{title}} &mdash; world’s marketplace for design.<br> {{note}}
 
       </div>
     </div>
 
 
-    <div class="row bg-dark text-white space">
+    <div class="row bg-secondary text-white space">
 
 
 

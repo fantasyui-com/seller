@@ -1,0 +1,14 @@
+<h1>{{message}}</h1>
+<h2>{{error.status}}</h2>
+<pre>{{error.stack}}</pre>
+
+
+{{#each content}}
+
+  <h1 class="display-4">{{title}}</h1>
+  <p class="lead">
+    {{text}}
+  </p>
+  <hr class="space">
+
+{{/each}}
