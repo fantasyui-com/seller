@@ -48,15 +48,7 @@ module.exports = function(config){
       'Gift Cards',
       'Branding eBook',
     ],
-    [
-      'Photos',
-      'Graphics',
-      'Templates',
-      'Themes',
-      'Fonts',
-      'Add-Ons',
-      '3D',
-    ]
+    data.menu.sub
   ]
 
 
@@ -76,7 +68,7 @@ module.exports = function(config){
     const isObject  = (!Array.isArray(input));
     const isSubList = (Array.isArray(input) && (input.length > 0) && (Array.isArray(input[0])) );
     if( isStringArray ){
-      return funct(input);
+      return payload(input);
     }else if(isObject){
       Object.keys(input).forEach(key=>{ input[key] = walker(input[key], payload) })
       return input;

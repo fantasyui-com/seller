@@ -38,30 +38,14 @@
 
     <div class="row">
       <div class="col">
-
-        <component-nav items="Get Free Goods, Open a Shop, Become a Partner, Discussions, Blog, Free Bonus Credits" />
-        
-
-
         <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link small" href="#">Get Free Goods</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link small" href="#">Open a Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link small" href="#">Become a Partner</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link small" href="#">Discussions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link small" href="#">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link small disabled" href="#">Free Bonus Credits</a>
-          </li>
+          {{#with menu}}
+            {{#each main}}
+            <li class="nav-item">
+              <a class="nav-link small" href="{{id}}">{{name}}</a>
+            </li>
+            {{/each}}
+          {{/with}}
         </ul>
       </div>
     </div>
@@ -89,40 +73,19 @@
 
 
 
-      <div class="col">
-        <h6>Resources</h6>
-        <ul class="list-unstyled">
-          <li class="p-2">Licenses</li>
-          <li class="p-2">Blog</li>
-          <li class="p-2">Discussions</li>
-          <li class="p-2">Products</li>
-          <li class="p-2">Collections</li>
-          <li class="p-2">Help Center</li>
-          <li class="p-2">Made with Creative Market</li>
-        </ul>
-      </div>
-
-      <div class="col">
-        <h6>The Goods</h6>
-        <ul class="list-unstyled">
-          <li class="p-2">Free Goods</li>
-          <li class="p-2">Purchase Credits</li>
-          <li class="p-2">Gift Cards</li>
-          <li class="p-2">Branding eBook</li>
-        </ul>
-      </div>
-
-      <div class="col">
-        <h6>Company</h6>
-        <ul class="list-unstyled">
-          <li class="p-2">About</li>
-          <li class="p-2">Brand</li>
-          <li class="p-2">Terms</li>
-          <li class="p-2">Cookie Policy</li>
-          <li class="p-2">Privacy Policy</li>
-          <li class="p-2">Careers</li>
-        </ul>
-      </div>
+      {{#with menu}}
+        {{#each footer}}
+        <div class="col">
+          <ul class="list-unstyled">
+          {{#each .}}
+            <li class="nav-item p-2">
+              <a class="nav-link text-light" href="{{id}}">{{name}}</a>
+            </li>
+          {{/each}}
+          </ul>
+        </div>
+        {{/each}}
+      {{/with}}
 
 
     </div>
