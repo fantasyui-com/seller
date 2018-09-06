@@ -1,13 +1,15 @@
-module.exports = function(config){
-  data = {};
+const kebabCase = require('lodash/kebabCase');
 
-  data.menu = {
-    main:[],
-    sub:[],
-    resources:[],
-    products:[],
-    categories:[],
+module.exports = function(config){
+
+  data = {
+    menu: {
+      main:[],
+      sub:[],
+      footer:[],
+    }
   };
+
 
   data.menu.main = [
     'Get Free Goods',
@@ -28,32 +30,63 @@ module.exports = function(config){
     '3D',
   ]
 
-  data.menu.footer1 = [
-    'Resources',
-    'Licenses',
-    'Blog',
-    'Discussions',
-    'Products',
-    'Collections',
-    'Help Center',
-    'Made with ' + config.company
+  data.menu.footer = [
+    [
+      'Resources',
+      'Licenses',
+      'Blog',
+      'Discussions',
+      'Products',
+      'Collections',
+      'Help Center',
+      'Made with ' + config.company
+    ],
+    [
+      'The Goods',
+      'Free Goods',
+      'Purchase Credits',
+      'Gift Cards',
+      'Branding eBook',
+    ],
+    [
+      'Photos',
+      'Graphics',
+      'Templates',
+      'Themes',
+      'Fonts',
+      'Add-Ons',
+      '3D',
+    ]
   ]
-  data.menu.footer2 = [
-    'The Goods',
-    'Free Goods',
-    'Purchase Credits',
-    'Gift Cards',
-    'Branding eBook',
-  ]
-  data.menu.footer3 = [
-    'Photos',
-    'Graphics',
-    'Templates',
-    'Themes',
-    'Fonts',
-    'Add-Ons',
-    '3D',
-  ]
+
+
+
+
+
+
+
+  function inflator(input){
+    return input
+      .map(name=>{ return {name}; })
+      .map(object=>{ object.id = kebabCase(object.name); return object; });
+  }
+
+  function walker(input, payload){
+    const isStringArray    = (Array.isArray(input)) && (input.length) > 0 && (typeof input[0] === 'string');
+    const isObject  = (!Array.isArray(input));
+    const isSubList = (Array.isArray(input) && (input.length > 0) && (Array.isArray(input[0])) );
+    if( isStringArray ){
+      return funct(input);
+    }else if(isObject){
+      Object.keys(input).forEach(key=>{ input[key] = walker(input[key], payload) })
+      return input;
+    }else if(isSubList){
+      input.forEach((list,index)=>{ input[index] = walker(input[index], payload)})
+      return input;
+    }
+  }
+
+  data.menu = walker( data.menu, inflator )
 
   return data;
 
