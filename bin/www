@@ -8,6 +8,9 @@ var app = require('../app');
 var debug = require('debug')('seller:server');
 var http = require('http');
 
+const opn = require('opn');
+
+
 /**
  * Get port from environment and store in Express.
  */
@@ -87,4 +90,10 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+
+
+  if(debug.enabled){
+    opn(`http://localhost:${addr.port}`)
+  }
+
 }

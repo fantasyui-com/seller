@@ -3,6 +3,7 @@
   "version": "0.7.0",
   "scripts": {
     "watch": "nodemon ./bin/www",
+    "debug": "DEBUG=seller:* npm start",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -12,7 +13,8 @@
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
     "lodash": "^4.17.10",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "opn": "^5.3.0"
   },
   "description": "Multi seller, multi vendor ecommerce marketplace with focus on minimalism.",
   "main": "app.js",

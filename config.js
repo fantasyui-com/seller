@@ -11,4 +11,9 @@ data.vendorCount = Number.MAX_SAFE_INTEGER.toLocaleString(
 );
 
 
+Object.assign(data, require(path.join(__dirname,'menu.js'))(data) )
+Object.assign(data, require(path.join(__dirname,'trending.js'))(data) )
+
 module.exports = data;
+
+console.log( JSON.stringify(module.exports, null, '  ') );

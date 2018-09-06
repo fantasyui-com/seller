@@ -1,6 +1,13 @@
 module.exports = function(config){
+  data = {};
 
-  data.menu = {};
+  data.menu = {
+    main:[],
+    sub:[],
+    resources:[],
+    products:[],
+    categories:[],
+  };
 
   data.menu.main = [
     'Get Free Goods',
@@ -47,5 +54,7 @@ module.exports = function(config){
     'Add-Ons',
     '3D',
   ]
+
+  return data;
 
 }
