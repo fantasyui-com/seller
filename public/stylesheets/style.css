@@ -1,4 +1,4 @@
-body {
+.lato-100, h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
 }
 
@@ -6,6 +6,11 @@ a {
   color: #00B7FF;
 }
 
-.space {
-  padding: 4rem;
+
+
+.ink-well {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: gray;
 }

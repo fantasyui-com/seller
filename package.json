@@ -7,6 +7,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "clear-module": "^3.0.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
@@ -14,7 +15,9 @@
     "http-errors": "~1.6.2",
     "lodash": "^4.17.10",
     "morgan": "~1.9.0",
-    "opn": "^5.3.0"
+    "oneof": "^1.0.1",
+    "opn": "^5.3.0",
+    "uuid": "^3.3.2"
   },
   "description": "Multi seller, multi vendor ecommerce marketplace with focus on minimalism.",
   "main": "app.js",

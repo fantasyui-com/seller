@@ -12,41 +12,48 @@ module.exports = function(config){
 
 
   data.menu.main = [
-    'Get Free Goods',
-    'Open a Shop',
-    'Become a Partner',
-    'Discussions',
-    'Blog',
-    'Free Bonus Credits',
+    // 'Themes',
+    // 'Glitch Art',
+    // 'Music',
+    // '3D',
+
+    //'Get Free Goods',
+    //'Open a Shop',
+    //'Become a Partner',
+    //'Discussions',
+    //'Blog',
+    //'Free Credits',
   ]
 
   data.menu.sub = [
-    'Photos',
-    'Graphics',
-    'Templates',
-    'Themes',
-    'Fonts',
-    'Add-Ons',
-    '3D',
+    // 'Photos',
+    // 'Graphics',
+    // 'Templates',
+    // 'Themes',
+    // 'Fonts',
+    // 'Add-Ons',
+    // '3D',
   ]
 
   data.menu.footer = [
     [
-      'Resources',
-      'Licenses',
-      'Blog',
-      'Discussions',
-      'Products',
-      'Collections',
+      //'Resources',
+      'Privacy Policy',
+      'Product Licensing',
+      'Refunds',
+      // 'Blog',
+      // 'Discussions',
+      // 'Products',
+      // 'Collections',
       'Help Center',
-      'Made with ' + config.company
+      //'Made with ' + config.company
     ],
     [
-      'The Goods',
-      'Free Goods',
-      'Purchase Credits',
-      'Gift Cards',
-      'Branding eBook',
+    //  'Premium Products',
+    //  'Free Products',
+    //  'Purchase Credits',
+      //'Gift Cards',
+      //'Branding eBook',
     ],
     data.menu.sub
   ]
@@ -80,6 +87,7 @@ module.exports = function(config){
 
   data.menu = walker( data.menu, inflator )
 
+  return {menu:{}};
   return data;
 
 }
