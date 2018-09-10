@@ -7,18 +7,31 @@
 
 
 <div>
-  {{{section-header "Primary Colors" ""}}}
+  {{{section-header "Bootstrap Color Set" "$4USD"}}}
 </div>
+
 
 <div>
-  <div class="ink-well d-inline-block" style="background: red;"></div>
-  <div class="ink-well d-inline-block" style="background: green;"></div>
-  <div class="ink-well d-inline-block" style="background: blue;"></div>
-  <div class="ink-well d-inline-block" style="background: purple;"></div>
-  <div class="ink-well d-inline-block" style="background: magenta;"></div>
-  <div class="ink-well d-inline-block" style="background: yellow;"></div>
+
 </div>
 
-<div class="card-deck py-3">
-...
+
+<div class="card-columns py-3">
+
+  {{#each colors}}
+
+
+  <div class="card">
+    <div class="card-body" style="height: 100px; color: {{{foreground}}}; background: {{{background}}};">
+      {{background}} ({{foreground}})
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+
+  {{/each}}
+
 </div>
