@@ -53,8 +53,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 app.use('/about', aboutRouter); //NOTE: req.params stores the route variables
-app.use('/a', productRouter); //NOTE: req.params stores the route variables
-app.use('/a', storefrontRouter); //NOTE: req.params stores the route variables
+
+app.use('/browse', productRouter); //NOTE: req.params stores the route variables
+app.use('/browse', storefrontRouter); //NOTE: req.params stores the route variables
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
