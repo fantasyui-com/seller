@@ -17,12 +17,9 @@ router.get('/:companyId/:generatorId/:productId', function(req, res, next) {
 
   // info from URL
   const generation = {
-    generatorId: kebabCase(req.params.generatorId),
-
-    company: startCase(req.params.companyId),
-    companyId: kebabCase(req.params.companyId),
-    product: startCase(req.params.productId),
-    productId: kebabCase(req.params.productId),
+    generator: startCase(req.params.generatorId), generatorId: kebabCase(req.params.generatorId),
+    company: startCase(req.params.companyId), companyId: kebabCase(req.params.companyId),
+    product: startCase(req.params.productId), productId: kebabCase(req.params.productId),
   };
 
   const generatorPath = path.resolve(path.join(__dirname, '..', 'categories', generation.generatorId, 'index.js'));
@@ -31,8 +28,8 @@ router.get('/:companyId/:generatorId/:productId', function(req, res, next) {
     if(!err){
       const generator = require(generatorPath);
       generation.productUuid = uuidv5(generation.productId, uuidv5(generation.companyId, uuidv5.DNS));
-      generation.colors = generator(generation.productUuid);
-      res.render('product', Object.assign(generation, config));
+      const generated = generator({seed:generation.productUuid});
+      res.render('product', Object.assign(generated, generation, config));
     }else{
       next(createError(404));
     }

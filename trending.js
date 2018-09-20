@@ -5,7 +5,7 @@ module.exports = function(config){
 
   data.trending = [];
   [
-    {name: 'Navy and Soup',     products: ['Bootstrap Themes: Dreadnought',    'Bootstrap Colors: Potato and Cream']},
+    {name: 'Navy and Soup',     products: ['Workout Songs: Pizza Mondays',         'Bootstrap Colors: Potato and Cream']},
     {name: 'State Systems',     products: ['Bootstrap Colors: Arizona',        'Bootstrap Themes: Washington']},
     {name: 'Colours, Inc.',     products: ['Bootstrap Themes: Red',            'Bootstrap Colors: Green']},
     {name: 'Deus, LLC.',        products: ['Bootstrap Colors: Zeus',           'Bootstrap Themes: Hera']},

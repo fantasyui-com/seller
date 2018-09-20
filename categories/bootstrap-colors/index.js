@@ -45,7 +45,7 @@ const bootstrapColors = [
 
 ].map(function(o){ o.name = startCase(o.id); return o; });
 
-module.exports = function(seed){
+module.exports = function({seed)}{
 
   const response = [];
   const rnd = rng.create(seed);

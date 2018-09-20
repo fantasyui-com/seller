@@ -5,8 +5,9 @@ const createProducts = function (options = {count, companies}){
   return response;
 };
 
+let sliceStart = 0;
+
 module.exports = function(app){
-  let sliceStart = 0;
   return function(count) {
 
     // app.config.companies
