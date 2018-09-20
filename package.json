@@ -1,6 +1,6 @@
 {
   "name": "seller",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "scripts": {
     "watch": "nodemon ./bin/www",
     "debug": "DEBUG=seller:* npm start",
