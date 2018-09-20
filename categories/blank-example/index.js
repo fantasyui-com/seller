@@ -1,3 +1,9 @@
+/*
+  It is possible to generate on the fly, pre-generate, or generate-and-cache.
+  1. On the fly simply returns the payload
+  2. pre-generator looks up previously generated summary-d26d4bcd-cbc9-44b8-8657-53a5b14c5ed3.json, preview-d26d4bcd-cbc9-44b8-8657-53a5b14c5ed3.jpg[|mp3|zip] and product-d26d4bcd-cbc9-44b8-8657-53a5b14c5ed3.zip
+  3. generates it and stores similar to #2 in a .cache
+*/
 
 module.exports = function({seed}){
 
@@ -23,21 +29,31 @@ module.exports = function({seed}){
     };
     return response;
   };
+
   response.preview = function({seed}){
     const response = {
       meta:{
-        name:'',
-        price:'',
+        size:'100x100',
+        thumbnail:'',
       },
-      data:[ // this could be a list of colors
+      data:[ // this could be a list of colors, or piece of song,
         {},
         {}
       ],
     };
     return response;
   };
+
   response.product = function({seed}){
-    const response = '';
+    const response = {
+      meta:{
+        checksum:''
+        purchased:'',
+        price:'',
+      },
+      data:'', // this should be a zip URL?
+    };
+    return response;
   };
 
   return response;
