@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "chromatism": "^3.0.0",
-    "clear-module": "^3.0.0",
+    "clear-module": "^3.2.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
-    "hbs": "~4.0.1",
+    "hbs": "^4.0.4",
     "http-errors": "~1.6.2",
     "lodash": "^4.17.10",
     "morgan": "~1.9.0",
@@ -35,6 +35,6 @@
   },
   "homepage": "https://github.com/fantasyui-com/seller#readme",
   "devDependencies": {
-    "nodemon": "^1.18.3"
+    "nodemon": "^1.18.11"
   }
 }
