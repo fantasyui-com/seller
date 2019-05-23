@@ -35,6 +35,6 @@
   },
   "homepage": "https://github.com/fantasyui-com/seller#readme",
   "devDependencies": {
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.19.0"
   }
 }
