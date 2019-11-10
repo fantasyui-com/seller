@@ -12,7 +12,7 @@
     "cookie-parser": "~1.4.4",
     "debug": "~4.1.1",
     "express": "~4.17.1",
-    "hbs": "^4.0.5",
+    "hbs": "^4.0.6",
     "http-errors": "~1.7.3",
     "lodash": "^4.17.15",
     "morgan": "~1.9.1",
@@ -35,6 +35,6 @@
   },
   "homepage": "https://github.com/fantasyui-com/seller#readme",
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.4"
   }
 }
