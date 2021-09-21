@@ -4,7 +4,8 @@
   "scripts": {
     "watch": "nodemon ./bin/www",
     "debug": "DEBUG=seller:* npm start",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "save": "git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;"
   },
   "dependencies": {
     "chromatism": "^3.0.0",
@@ -28,13 +29,13 @@
     "url": "git+https://github.com/fantasyui-com/seller.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "fantasyui.com <fantasyui.com@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fantasyui-com/seller/issues"
   },
   "homepage": "https://github.com/fantasyui-com/seller#readme",
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "nodemon": "^2.0.12"
   }
 }
